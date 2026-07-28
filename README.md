@@ -10,27 +10,26 @@
 Este repositorio contiene la **propuesta** de diseño para el portafolio personal en base a **mis proyectos y trabajos anteriores**. 
 
 El proyecto está preparado para consultarse de **dos formas distintas**: 
-- [Mediante acceso directo en la nube](https://design.penpot.app/#/view?file-id=9529fedc-e097-80ce-8008-64cea048fef8&page-id=913d4a22-ba3f-8112-8008-613dd747e4b8&section=interactions&index=0&share-id=d390ec3b-f0b3-80cd-8008-64d06ed9c15c) (**Requiere cuenta gratuita de penpot - Se recomienda Google**) 
+- [Mediante acceso directo en la nube](https://design.penpot.app/#/view?file-id=9529fedc-e097-80ce-8008-64cea048fef8&page-id=913d4a22-ba3f-8112-8008-613dd747e4b8&section=interactions&index=0&share-id=d390ec3b-f0b3-80cd-8008-64d06ed9c15c) 
 
 - Descargando e importando el archivo fuente a la aplicacion desplegada en un entorno local contenerizado con Docker.
 
-### Como inspeccionar
+### Como inspeccionar (Web y Local)
 ![Vista previa del portafolio](./assets/tuto.png)
 
 
 ---
-## Opciones para visualizar proyecto en Penpot
+## Opción 1. Visualización Directa Online (Recomendada)
 
-## 1. Visualización Directa Online (Recomendada)
+Para revisar el diseño final y probar las interacciones sin necesidad de instalar software adicional. La vista interactiva permite navegar por la estructura de pantallas e inspeccionar propiedades de diseño como fuentes, colores y código CSS generado.
 
-Para revisar el diseño final y probar las interacciones sin necesidad de instalar software adicional:
+> **Requiere cuenta gratuita de penpot - Se recomienda Google**
 
-* Acceso directo al prototipo: [LINK](https://design.penpot.app/#/view?file-id=9529fedc-e097-80ce-8008-64cea048fef8&page-id=913d4a22-ba3f-8112-8008-613dd747e4b8&section=interactions&index=0&share-id=d390ec3b-f0b3-80cd-8008-64d06ed9c15c)
-> La vista interactiva permite navegar por la estructura de pantallas e inspeccionar propiedades de diseño como fuentes, colores y código CSS generado.
+* [Acceso directo al prototipo](https://design.penpot.app/#/view?file-id=9529fedc-e097-80ce-8008-64cea048fef8&page-id=913d4a22-ba3f-8112-8008-613dd747e4b8&section=interactions&index=0&share-id=d390ec3b-f0b3-80cd-8008-64d06ed9c15c)
 
-## 2. Despliegue Local con Docker
+## Opción 2. Despliegue Local con Docker
 
-Si prefieres revisar el proyecto dentro de una instancia propia e independiente de Penpot (Y así aprovechar caracteristica como **ver/generar codigo completamente gratis**), puedes levantar el servidor localmente mediante Docker e importar el [index.penpot](https://github.com/MarAlvGEN/portafolio/blob/main/index.penpot). 
+Si prefieres revisar el proyecto dentro de una instancia propia e independiente de Penpot (Y así aprovechar caracteristica como **generar codigo completamente gratis**), puedes levantar el servidor localmente mediante Docker e importar el [`index.penpot`](https://github.com/MarAlvGEN/portafolio/blob/main/index.penpot). 
 > [Más info en la documentación de Penpot](https://help.penpot.app/technical-guide/getting-started/docker/)
 
 ---
