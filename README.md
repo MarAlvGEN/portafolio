@@ -9,10 +9,10 @@
 ## Resumen
 Este repositorio contiene la **propuesta** de diseño para el portafolio personal en base a **mis proyectos y trabajos anteriores**. 
 
-El proyecto está preparado para consultarse de **dos formas distintas**: 
-- [Mediante acceso directo en la nube](https://design.penpot.app/#/view?file-id=9529fedc-e097-80ce-8008-64cea048fef8&page-id=913d4a22-ba3f-8112-8008-613dd747e4b8&section=interactions&index=0&share-id=d390ec3b-f0b3-80cd-8008-64d06ed9c15c) 
+El proyecto está preparado para que puedas consultarlo de **dos formas distintas**: 
+1. [Mediante acceso directo en la nube](https://design.penpot.app/#/view?file-id=9529fedc-e097-80ce-8008-64cea048fef8&page-id=913d4a22-ba3f-8112-8008-613dd747e4b8&section=interactions&index=0&share-id=d390ec3b-f0b3-80cd-8008-64d06ed9c15c) 
 
-- Descargando e importando el archivo fuente a la aplicacion desplegada en un entorno local contenerizado con Docker.
+2. Descargando e importando el archivo fuente a la aplicacion desplegada en un entorno local contenerizado con Docker.
 
 ### Como inspeccionar (Web y Local)
 ![Vista previa del portafolio](./assets/tuto.png)
