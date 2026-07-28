@@ -8,7 +8,8 @@
 Este repositorio contiene la **propuesta** de diseño para el portafolio personal en base a **mis proyectos y trabajos anteriores**. 
 
 El proyecto está preparado para consultarse de **dos formas distintas**: 
-- [Mediante acceso directo en la nube](https://design.penpot.app/#/view?file-id=9529fedc-e097-80ce-8008-64cea048fef8&page-id=913d4a22-ba3f-8112-8008-613dd747e4b8&section=interactions&index=1) (**Requiere cuenta gratuita de penpot para comentar**) 
+- [Mediante acceso directo en la nube](https://design.penpot.app/#/view?file-id=9529fedc-e097-80ce-8008-64cea048fef8&page-id=913d4a22-ba3f-8112-8008-613dd747e4b8&section=interactions&index=1) (**Requiere cuenta gratuita de penpot - Se recomienda Google**) 
+
 - Descargando e importando el archivo fuente a la aplicacion desplegada en un entorno local contenerizado con Docker.
 
 ### Como inspeccionar
