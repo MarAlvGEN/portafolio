@@ -40,4 +40,4 @@ Seleccioné **Penpot** para el diseño de este prototipo por tres razones técni
 
 * **Inspección de código libre e ilimitada:** A diferencia de Figma (que restringió su *Dev Mode* tras un muro de pago), Penpot permite inspeccionar/exportar el código HTML, CSS y SVG generado de forma 100% gratuita y sin limitaciones.
 * **Terminología nativa de CSS:** En lugar de usar solo términos para diseñadores (como hace Figma para sus botones), Penpot utiliza las propiedades de CSS reales en su UI (por ejemplo, los botones directamente se llaman `align-items` o `justify-content`, ect). Diseñar en Penpot ayuda mucho a entener como se maqueta en CSS.
-- **Rendimiento optimizado y autonomía**: Al poder desplegar Penpot localmente con Docker, la herramienta aprovecha los recursos del sistema sin depender de la velocidad de conexión a internet ni de la carga de servidores de terceros.
+*  **Rendimiento optimizado y autonomía**: Al poder desplegar Penpot localmente con Docker, la herramienta aprovecha los recursos del sistema sin depender de la velocidad de conexión a internet ni de la carga de servidores de terceros.
