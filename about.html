@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | NeTenebrae</title>
+    <meta name="description" content="About Mauricio Alvarez - Backend Developer, Sysadmin, and Ethical Hacker." />
+    <meta name="theme-color" content="#0F1115" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Intel+One+Mono:wght@300;500;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="bg-decoration" aria-hidden="true"><div class="bg-line-footer"></div></div>
+
+    <main>
+      <section id="about" class="about">
+        <div class="bg-shape bg-shape--ring" aria-hidden="true"></div>
+        <div class="bg-shape bg-shape--line-h" aria-hidden="true"></div>
+        <div class="about__left">
+          <div class="about__image-placeholder">
+            [PROFILE IMAGE]
+          </div>
+
+          <div class="terminal">
+            <div class="terminal__header">
+              <div class="terminal__dots">
+                <span class="terminal__dot terminal__dot--red"></span>
+                <span class="terminal__dot terminal__dot--yellow"></span>
+                <span class="terminal__dot terminal__dot--green"></span>
+              </div>
+              <span class="terminal__title" data-i18n="about_terminal_title">root@portfolio:~$ skill --list --verbose</span>
+            </div>
+            <div class="terminal__body">
+              <div><span class="terminal__label" data-i18n="about_profile">PROFILE:</span> Mauricio &Aacute;lvarez</div>
+              <div><span class="terminal__label" data-i18n="about_alias">ALIAS:</span> NeTenebrae</div>
+              <div><span class="terminal__label" data-i18n="about_status">STATUS:</span> Active</div>
+              <hr class="terminal__divider" />
+              <div class="mono-chart">
+                <div class="mono-chart__row">
+                  <span class="mono-chart__label">Linux Admin</span>
+                  <div class="mono-chart__track"><div class="mono-chart__fill" data-percent="92"></div></div>
+                  <span class="mono-chart__value">92%</span>
+                </div>
+                <div class="mono-chart__row">
+                  <span class="mono-chart__label">Java / Spring Boot</span>
+                  <div class="mono-chart__track"><div class="mono-chart__fill" data-percent="88"></div></div>
+                  <span class="mono-chart__value">88%</span>
+                </div>
+                <div class="mono-chart__row">
+                  <span class="mono-chart__label">Ethical Hacking</span>
+                  <div class="mono-chart__track"><div class="mono-chart__fill" data-percent="85"></div></div>
+                  <span class="mono-chart__value">85%</span>
+                </div>
+                <div class="mono-chart__row">
+                  <span class="mono-chart__label">System Architecture</span>
+                  <div class="mono-chart__track"><div class="mono-chart__fill" data-percent="78"></div></div>
+                  <span class="mono-chart__value">78%</span>
+                </div>
+                <div class="mono-chart__row">
+                  <span class="mono-chart__label">Automation</span>
+                  <div class="mono-chart__track"><div class="mono-chart__fill" data-percent="75"></div></div>
+                  <span class="mono-chart__value">75%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about__right">
+          <h2 data-i18n="about_heading">PROFILE: MAURICIO &Aacute;LVAREZ</h2>
+
+          <p data-i18n="about_p1">
+            With over 5 years of experience in backend development and systems administration,
+            I specialize in building robust, secure Java applications backed by Spring Boot
+            and deployed across distributed Linux environments. My work bridges the gap between
+            development and operations, ensuring applications are not only functional but hardened
+            against modern attack vectors.
+          </p>
+
+          <p data-i18n="about_p2">
+            My journey into ethical hacking has given me a unique perspective on application security.
+            I actively contribute to the cybersecurity community by creating educational content,
+            breaking down common web vulnerabilities, and demonstrating practical exploitation
+            techniques on my social media channels. Security is not an afterthought in my workflow
+            &mdash; it is the foundation.
+          </p>
+
+          <div>
+            <div class="tech-label" data-i18n="about_tech_label">CORE TECHNOLOGIES</div>
+            <div class="tech-grid" id="techGrid"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/icons.js"></script>
+    <script src="js/badges.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+      IconService.init().then(function() {
+        new Nav('about').render();
+        new Footer().render();
+        var i18n = new I18n();
+        i18n.init();
+        new StatBarAnimator().init();
+
+        var techItems = [
+          { name: 'Java',          iconId: 'java' },
+          { name: 'Spring Boot',   iconId: 'spring' },
+          { name: 'Linux',         iconId: 'linux' },
+          { name: 'Bash',          iconId: 'bash' },
+          { name: 'Docker',        iconId: 'docker' },
+          { name: 'Python',        iconId: 'python' },
+          { name: 'NoSQL',         iconId: 'nosql' },
+          { name: 'Git',           iconId: 'git' },
+          { name: 'Cybersecurity', iconId: 'cybersecurity' },
+        ];
+
+        var grid = document.getElementById('techGrid');
+        techItems.forEach(function(item) {
+          var card = document.createElement('div');
+          card.className = 'tech-card fade-up';
+          card.innerHTML =
+            '<div class="tech-card__inner">' +
+              '<div class="tech-card__icon">' + IconService.get(item.iconId) + '</div>' +
+              '<span class="tech-card__name">' + item.name + '</span>' +
+            '</div>';
+          grid.appendChild(card);
+        });
+
+        document.querySelectorAll('.tech-card').forEach(function(card) {
+          new TiltCard(card, 12);
+        });
+
+        FadeUpAnimator.init();
+      });
+    </script>
+  </body>
+</html>
