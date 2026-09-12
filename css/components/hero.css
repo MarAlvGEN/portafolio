@@ -1,0 +1,106 @@
+/* =============================================
+   Component — Hero (index)
+   ============================================= */
+.hero {
+	max-width: none;
+	display: flex;
+	align-items: center;
+	gap: clamp(20px, 4vw, 60px);
+	position: relative;
+	overflow: clip;
+}
+
+.hero-content {
+	flex: 1;
+	min-width: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: clamp(12px, 2vh, 20px);
+}
+
+.hero-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 7px 16px;
+	border: 1.5px solid var(--color-accent);
+	border-radius: var(--badge-radius);
+	font-family: var(--font-mono);
+	font-weight: 500;
+	font-size: 0.8rem;
+	color: var(--color-accent);
+	width: fit-content;
+	background: var(--color-accent-dim);
+}
+
+.hero-badge svg {
+	width: 14px;
+	height: 14px;
+}
+
+.hero h2 {
+	color: var(--color-text-muted);
+	font-weight: 300;
+	font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+}
+
+.hero-description {
+	max-width: 580px;
+}
+
+.hero-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 14px;
+	margin-top: 6px;
+}
+
+.hero-image {
+	flex: 0.9;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	height: clamp(600px, 80vh, 100vh);
+}
+
+.hero-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center top;
+	border-radius: 0;
+}
+
+/* Skewed green shape behind character */
+.hero__green-shape {
+	position: absolute;
+	bottom: -10%;
+	right: 0;
+	width: 55vw;
+	max-width: 600px;
+	height: 120%;
+	background: var(--color-accent);
+	transform: skewX(-15deg);
+	transform-origin: bottom right;
+	z-index: 0;
+	border-radius: 4px;
+	pointer-events: none;
+}
+
+/* Rotated copyright near character contour */
+.hero__copyright {
+	position: absolute;
+	bottom: 18%;
+	right: 22%;
+	font-family: var(--font-mono);
+	font-size: 0.7rem;
+	color: var(--color-text-muted);
+	transform: rotate(-30deg);
+	transform-origin: center;
+	opacity: 0.5;
+	z-index: 3;
+	white-space: nowrap;
+	pointer-events: none;
+}
