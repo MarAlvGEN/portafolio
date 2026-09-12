@@ -5,17 +5,15 @@
 	max-width: none;
 	display: flex;
 	align-items: center;
-	gap: clamp(20px, 4vw, 60px);
+	justify-content: center;
+	gap: clamp(50px, 4vw, 60px);
 	position: relative;
 	overflow: clip;
 }
 
 .hero-content {
-	flex: 1;
-	min-width: 0;
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
 	gap: clamp(12px, 2vh, 20px);
 }
 
@@ -57,9 +55,9 @@
 }
 
 .hero-image {
-	flex: 0.9;
 	display: flex;
-	align-items: center;
+	padding-top: 5rem;
+	transform: scale(1.5);
 	justify-content: center;
 	position: relative;
 	height: clamp(600px, 80vh, 100vh);
@@ -89,7 +87,6 @@
 	pointer-events: none;
 }
 
-/* Rotated copyright near character contour */
 .hero__copyright {
 	position: absolute;
 	bottom: 18%;

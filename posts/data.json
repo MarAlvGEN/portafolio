@@ -1,61 +1,52 @@
 [
-  {
-    "slug": "hello-world",
-    "dir": "hello-world",
-    "date": "2026-09-09",
-    "tags": [
-      "meta",
-      "setup",
-      "markdown"
-    ],
-    "image": "preview.svg",
-    "title": {
-      "en": "Hello World: Setting Up This Blog",
-      "es": "Hola Mundo: Configurando Este Blog"
-    },
-    "description": {
-      "en": "How I built a Markdown-powered blog that works with Obsidian and deploys to GitHub Pages.",
-      "es": "Cómo construí un blog basado en Markdown que funciona con Obsidian y se despliega en GitHub Pages."
-    },
-    "languages": {
-      "en": {
-        "file": "index.en.md",
-        "wordCount": 127
-      },
-      "es": {
-        "file": "index.es.md",
-        "wordCount": 131
-      }
-    }
-  },
-  {
-    "slug": "instalando-arch-linux",
-    "dir": "instalando-arch-linux",
-    "date": "2026-09-08",
-    "tags": [
-      "linux",
-      "arch",
-      "installation",
-      "encryption"
-    ],
-    "image": "preview.svg",
-    "title": {
-      "en": "Installing Arch Linux from Scratch",
-      "es": "Instalando Arch Linux desde Cero"
-    },
-    "description": {
-      "en": "A complete guide to installing Arch Linux with encrypted partitions, GRUB bootloader, and a minimal KDE Plasma desktop.",
-      "es": "Guía completa para instalar Arch Linux con particiones cifradas, bootloader GRUB y un escritorio KDE Plasma mínimo."
-    },
-    "languages": {
-      "en": {
-        "file": "index.en.md",
-        "wordCount": 378
-      },
-      "es": {
-        "file": "index.es.md",
-        "wordCount": 383
-      }
-    }
-  }
+	{
+		"slug": "hello-world",
+		"dir": "hello-world",
+		"date": "2026-09-09",
+		"tags": ["meta", "setup", "markdown"],
+		"image": "preview.svg",
+		"title": {
+			"en": "Hello World: Setting Up This Blog",
+			"es": "Hola Mundo: Configurando Este Blog"
+		},
+		"description": {
+			"en": "How I built a Markdown-powered blog that works with Obsidian and deploys to GitHub Pages.",
+			"es": "Cómo construí un blog basado en Markdown que funciona con Obsidian y se despliega en GitHub Pages."
+		},
+		"languages": {
+			"en": {
+				"file": "index.en.md",
+				"wordCount": 127
+			},
+			"es": {
+				"file": "index.es.md",
+				"wordCount": 131
+			}
+		}
+	},
+	{
+		"slug": "instalando-arch-linux",
+		"dir": "instalando-arch-linux",
+		"date": "2026-09-08",
+		"tags": ["linux", "arch", "installation", "encryption"],
+		"image": "preview.svg",
+		"title": {
+			"en": "Installing Arch Linux from Scratch",
+			"es": "Instalando Arch Linux desde Cero"
+		},
+		"description": {
+			"en": "A complete guide to installing Arch Linux with encrypted partitions, GRUB bootloader, and a minimal KDE Plasma desktop.",
+			"es": "Guía completa para instalar Arch Linux con particiones cifradas, bootloader GRUB y un escritorio KDE Plasma mínimo."
+		},
+		"languages": {
+			"en": {
+				"file": "index.en.md",
+				"wordCount": 378
+			},
+			"es": {
+				"file": "index.es.md",
+				"wordCount": 383
+			}
+		}
+	}
 ]
