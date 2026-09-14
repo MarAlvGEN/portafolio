@@ -6,8 +6,8 @@
    Estructura:
    css/base/       → tokens, reset, tipografía, layout, responsive
    css/components/ → navbar, hero, botones, badges/pills, terminal,
-                     chart, about, projects, modal, footer, toggle, fondo
-   css/pages/      → blog
+                     chart, about, projects, footer, toggle, fondo
+   css/pages/      →
    css/animations/ → micro-interacciones
    ============================================= */
 @import url('./base/variables.css');
@@ -22,12 +22,11 @@
 @import url('./components/badges.css');
 @import url('./components/about.css');
 @import url('./components/projects.css');
-@import url('./components/modal.css');
 @import url('./components/footer.css');
 @import url('./components/lang-toggle.css');
 @import url('./components/background.css');
 @import url('./components/headings.css');
-@import url('./pages/blog.css');
+@import url('./components/highlights.css');
 @import url('./animations/animations.css');
 @import url('./base/responsive.css');
 @import url('./base/scrollbar.css');

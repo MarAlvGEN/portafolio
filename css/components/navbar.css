@@ -10,6 +10,9 @@
 	justify-content: center;
 	padding: 14px 40px;
 	z-index: 110;
+	background: rgba(15, 17, 21, 0.85);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
 }
 
 .nav-container {
@@ -36,7 +39,7 @@
 	height: var(--nav-btn-size);
 	width: 135px;
 	padding: 12px 18px;
-	border-radius: var(--nav-btn-radius);
+	border-radius: 9999px;
 	border: 1.5px solid var(--color-border);
 	font-family: var(--font-mono);
 	font-weight: 500;
@@ -53,17 +56,15 @@
 }
 
 .nav-btn--active {
+	background: var(--color-accent);
+	color: #0f1115;
 	border-color: var(--color-accent);
-	color: var(--color-accent);
-	box-shadow:
-		0 0 14px var(--color-accent-dim),
-		inset 0 0 14px var(--color-accent-dim);
 }
 
 .nav-btn--active:hover {
+	background: var(--color-accent);
+	color: #0f1115;
 	border-color: var(--color-accent);
-	color: var(--color-accent);
-	background: var(--color-accent-dim);
 }
 
 .nav-btn svg,

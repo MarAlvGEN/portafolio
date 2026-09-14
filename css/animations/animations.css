@@ -71,8 +71,7 @@
 	.text-reveal__text,
 	.tech-card,
 	.btn,
-	.project-card,
-	.blog-card {
+	.project-card {
 		transition: none;
 		transform: none;
 	}

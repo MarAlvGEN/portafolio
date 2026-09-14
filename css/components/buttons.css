@@ -42,14 +42,33 @@
 }
 
 .btn--ghost {
-	background: transparent;
+	background: var(--color-bg-alt);
 	color: var(--color-text-muted);
 	border: 1px solid var(--color-border);
 }
 
 .btn--ghost:hover {
+	background: var(--color-accent-dim);
 	border-color: var(--color-accent);
 	color: var(--color-accent);
+}
+
+.btn--white {
+	background: #fff;
+	color: #0f1115;
+	border: 2px solid #fff;
+}
+
+.btn--white:hover {
+	background: transparent;
+	color: #fff;
+	border-color: #fff;
+}
+
+.btn--sm {
+	padding: 5px 14px;
+	min-height: 36px;
+	font-size: 0.72rem;
 }
 
 /* --- Email Tooltip --- */

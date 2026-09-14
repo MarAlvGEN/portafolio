@@ -1,0 +1,69 @@
+[
+	{
+		"slug": "intel-buffer-fix",
+		"titleKey": "project_1_title",
+		"image": "preview.png",
+		"tagIds": ["linux", "bash"],
+		"tagNames": ["Linux", "Bash"],
+		"githubUrl": "https://github.com/NeTenebraes/Intel-Legacy-Buffer-Fix-Arch-Linux"
+	},
+	{
+		"slug": "nenvim",
+		"titleKey": "project_2_title",
+		"image": "preview.png",
+		"tagIds": ["lua", "git"],
+		"tagNames": ["Lua", "Git"],
+		"githubUrl": "https://github.com/NeTenebraes/nenvim"
+	},
+	{
+		"slug": "nebspwm-dotfiles",
+		"titleKey": "project_3_title",
+		"image": "preview.png",
+		"tagIds": ["linux", "bash", "python"],
+		"tagNames": ["Linux", "Bash", "Python"],
+		"githubUrl": "https://github.com/NeTenebraes/neBSPWM-dotfiles"
+	},
+	{
+		"slug": "neCyberWiki",
+		"titleKey": "project_4_title",
+		"image": "preview.png",
+		"tagIds": ["cybersecurity", "git"],
+		"tagNames": ["Cybersecurity", "Git"],
+		"githubUrl": "https://github.com/NeTenebraes/neCyberWiki",
+		"demoUrl": "https://netenebraes.github.io/neCyberWiki/"
+	},
+	{
+		"slug": "bug-bounty-hunter",
+		"titleKey": "project_5_title",
+		"image": "preview.png",
+		"tagIds": ["cybersecurity", "nmap", "curl"],
+		"tagNames": ["Cybersecurity", "Nmap", "Curl"],
+		"githubUrl": "https://github.com/NeTenebraes"
+	},
+	{
+		"slug": "nasa-apod-explorer",
+		"titleKey": "project_6_title",
+		"image": "preview.png",
+		"tagIds": ["javascript", "curl"],
+		"tagNames": ["JavaScript", "Curl"],
+		"githubUrl": "https://github.com/MarAlvGEN/NASA_APOD_Explorer",
+		"demoUrl": "https://maralvgen.github.io/NASA_APOD_Explorer/"
+	},
+	{
+		"slug": "devPortes",
+		"titleKey": "project_7_title",
+		"image": "preview.png",
+		"tagIds": ["javascript", "nosql"],
+		"tagNames": ["JavaScript", "NoSQL"],
+		"githubUrl": "https://github.com/camilobermeo/devPortes",
+		"demoUrl": "https://camilobermeo.github.io/devPortes/"
+	},
+	{
+		"slug": "nvim-html-css-pr64",
+		"titleKey": "project_8_title",
+		"image": "preview.png",
+		"tagIds": ["lua", "git"],
+		"tagNames": ["Lua", "Git"],
+		"githubUrl": "https://github.com/Jezda1337/nvim-html-css/pull/64"
+	}
+]

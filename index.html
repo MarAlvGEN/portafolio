@@ -3,10 +3,10 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>NeTenebrae | Backend Developer & Sysadmin</title>
+		<title>NeTenebrae | Fullstack Developer & SecOps</title>
 		<meta
 			name="description"
-			content="Java & Spring Boot Developer with server administration roots and full-stack capabilities."
+			content="Backend developer with a hacker's mindset. Building secure APIs, automating Linux systems, and creating content for 64k+ developers."
 		/>
 		<meta name="theme-color" content="#0F1115" />
 		<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
@@ -27,8 +27,6 @@
 
 		<main>
 			<section id="home" class="hero">
-				<div class="hero__green-shape" aria-hidden="true"></div>
-
 				<div class="hero-content">
 					<span class="hero-badge">
 						<svg
@@ -50,20 +48,60 @@
 						<span data-i18n="hero_badge">Freelance</span>
 					</span>
 
+					<div class="hero-stats">
+						<a
+							href="https://youtube.com/@NeTenebrae"
+							class="hero-stat"
+							target="_blank"
+							rel="noopener"
+						>
+							<span
+								class="hero-stat__icon"
+								id="statYoutube"
+							></span>
+							<span class="hero-stat__label">YouTube</span>
+							<span class="hero-stat__value">17k+</span>
+						</a>
+						<a
+							href="https://tiktok.com/@netenebrae"
+							class="hero-stat"
+							target="_blank"
+							rel="noopener"
+						>
+							<span
+								class="hero-stat__icon"
+								id="statTiktok"
+							></span>
+							<span class="hero-stat__label">TikTok</span>
+							<span class="hero-stat__value">47k+</span>
+						</a>
+						<a
+							href="https://github.com/NeTenebraes"
+							class="hero-stat"
+							target="_blank"
+							rel="noopener"
+						>
+							<span
+								class="hero-stat__icon"
+								id="statGithub"
+							></span>
+							<span class="hero-stat__label">Open Source</span>
+							<span class="hero-stat__value">PRs</span>
+						</a>
+					</div>
+
 					<h1>NeTenebrae</h1>
 
 					<h2 data-i18n="hero_subtitle">
-						Backend Developer | Sysadmin
+						Fullstack Developer | SecOps
 					</h2>
 
-					<p class="hero-description" data-i18n="hero_description">
-						Java &amp; Spring Boot Developer with server
-						administration roots and full-stack capabilities. Driven
-						by ethical hacking, I build secure applications using
-						modern front-end tech, while teaching Linux fundamentals
-						and breaking down web vulnerabilities for my community
-						on social media.
-					</p>
+			<p class="hero-description" data-i18n="hero_description">
+					Backend developer with a hacker's mindset. I build
+					secure APIs and automate Linux systems, then turn
+					what I learn into content for 64k+ developers across
+					YouTube and TikTok.
+				</p>
 
 					<div class="hero-actions">
 						<button
@@ -93,7 +131,7 @@
 							</svg>
 							<span data-i18n="hero_email">Email</span>
 						</button>
-						<a href="#" class="btn btn--ghost" download>
+						<a href="#" class="btn btn--white" download>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 24 24"
@@ -117,12 +155,8 @@
 				<div class="hero-image">
 					<img
 						src="assets/images/avatar-banner.webp"
-						alt="NeTenebrae - Backend Developer and Sysadmin"
+						alt="NeTenebrae - Backend Developer & SecOps"
 					/>
-				</div>
-
-				<div class="hero__copyright" aria-hidden="true">
-					&copy; Mauricio &Aacute;lvarez
 				</div>
 			</section>
 		</main>
@@ -138,6 +172,21 @@
 				new Footer().render();
 				var i18n = new I18n();
 				i18n.init();
+
+				var stats = [
+					{ id: 'statYoutube', icon: 'youtube' },
+					{ id: 'statGithub', icon: 'github' },
+					{ id: 'statLinux', icon: 'linux' },
+				];
+				stats.forEach(function (s) {
+					var el = document.getElementById(s.id);
+					if (el) el.innerHTML = IconService.get(s.icon);
+				});
+
+				var tiktokSvg =
+					'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.28 6.28 0 00-.79-.05 6.28 6.28 0 00-6.28 6.28 6.28 6.28 0 006.28 6.28 6.28 6.28 0 006.28-6.28V8.75a8.18 8.18 0 004.77 1.52V6.82a4.84 4.84 0 01-1.03-.13z"/></svg>';
+				var tiktokEl = document.getElementById('statTiktok');
+				if (tiktokEl) tiktokEl.innerHTML = tiktokSvg;
 			});
 		</script>
 	</body>

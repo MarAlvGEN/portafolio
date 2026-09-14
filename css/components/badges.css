@@ -1,12 +1,12 @@
 /* =============================================
    Component — Badges / pills en ROW
    Sistema único de píldoras: .badge, .tech-card,
-   .blog-card__tag. Siempre fila, nunca columna.
+   .project-card__tag. Siempre fila, nunca columna.
    Los márgenes viven en los contenedores (gap),
    no en cada píldora.
    ============================================= */
 
-/* --- Badge genérico (proyectos, modal) --- */
+/* --- Badge genérico (proyectos) --- */
 .badge {
 	display: inline-flex;
 	flex-direction: row;
@@ -151,8 +151,8 @@
 	color: var(--color-accent);
 }
 
-/* --- Tags del blog como píldoras --- */
-.blog-card__tag {
+/* --- Tags como píldoras --- */
+.project-card__tag {
 	display: inline-flex;
 	flex-direction: row;
 	align-items: center;
@@ -161,6 +161,7 @@
 	font-size: 0.65rem;
 	color: var(--color-accent);
 	background: var(--color-accent-dim);
+	border: 1px solid rgba(74, 222, 128, 0.2);
 	padding: 6px 12px;
 	border-radius: var(--radius-pill);
 	letter-spacing: 0.5px;

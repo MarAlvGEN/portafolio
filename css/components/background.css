@@ -91,13 +91,3 @@
 	opacity: 0.12;
 	transform: rotate(45deg);
 }
-
-.bg-shape--dot {
-	bottom: 15%;
-	left: 8%;
-	width: 12px;
-	height: 12px;
-	background: var(--color-accent);
-	border-radius: 50%;
-	opacity: 0.12;
-}

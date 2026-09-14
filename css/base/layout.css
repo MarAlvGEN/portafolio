@@ -21,8 +21,8 @@ section {
 	overflow-y: visible;
 }
 
-/* Contenedor del blog (inyectado por JS) */
-#blogContent {
+/* Contenedor de proyectos (inyectado por JS) */
+#projectsContent {
 	width: 100%;
 	min-width: 0;
 }

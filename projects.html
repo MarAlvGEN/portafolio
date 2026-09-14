@@ -31,118 +31,32 @@
 					class="bg-shape bg-shape--diagonal"
 					aria-hidden="true"
 				></div>
-				<div class="bg-shape bg-shape--dot" aria-hidden="true"></div>
-				<div class="section-heading" data-i18n="projects_heading">
+				<div
+					class="section-heading"
+					id="projectsHeading"
+					data-i18n="projects_heading"
+				>
 					PROJECTS
 				</div>
-				<div class="projects" id="projectsGrid"></div>
+				<div id="projectsContent"></div>
 			</section>
 		</main>
 
-		<!-- Modal -->
-		<div class="modal-overlay" id="projectModal">
-			<div class="modal">
-				<div class="modal__header">
-					<div class="modal__dots">
-						<span class="modal__dot modal__dot--red"></span>
-						<span class="modal__dot modal__dot--yellow"></span>
-						<span class="modal__dot modal__dot--green"></span>
-					</div>
-					<span class="modal__title" id="modalTitle"
-						>PROJECT DETAIL</span
-					>
-					<button class="modal__close" onclick="modal.close()">
-						&times;
-					</button>
-				</div>
-				<div class="modal__body">
-					<div class="modal__content" id="modalContent"></div>
-				</div>
-				<div class="modal__footer">
-					<div class="modal__techstack" id="modalTechstack"></div>
-					<div class="modal__actions">
-						<a
-							href="#"
-							class="btn btn--ghost"
-							id="modalGithub"
-							data-i18n="modal_github"
-							>GitHub</a
-						>
-						<a
-							href="#"
-							class="btn btn--ghost"
-							id="modalDemo"
-							data-i18n="modal_demo"
-							>Live Demo</a
-						>
-					</div>
-				</div>
-			</div>
-		</div>
-
+		<script src="js/marked.min.js"></script>
 		<script src="js/icons.js"></script>
 		<script src="js/badges.js"></script>
 		<script src="js/components.js"></script>
 		<script src="js/i18n.js"></script>
 		<script src="js/app.js"></script>
+		<script src="js/projects.js"></script>
 		<script>
 			IconService.init().then(function () {
 				new Nav('projects').render();
 				new Footer().render();
 				var i18n = new I18n();
 				i18n.init();
-				window.modal = new ProjectModal();
-				window.modal.setLang(i18n);
-
-				var grid = document.getElementById('projectsGrid');
-				ProjectModal.DATA.forEach(function (project, index) {
-					var article = document.createElement('article');
-					article.className = 'project-card';
-					article.setAttribute(
-						'onclick',
-						'modal.open(' + index + ')',
-					);
-
-					var tagsHtml = project.tagIds
-						.map(function (id, i) {
-							return (
-								'<span class="badge">' +
-								(IconService.get(id) || '') +
-								'<span class="badge__text">' +
-								project.tagNames[i] +
-								'</span></span>'
-							);
-						})
-						.join('');
-
-					var actionsHtml =
-						'<a href="' +
-						(project.githubUrl || '#') +
-						'" class="btn btn--ghost" onclick="event.stopPropagation()" target="_blank" rel="noopener noreferrer" data-i18n="modal_github">GitHub</a>';
-					if (project.demoUrl) {
-						actionsHtml +=
-							'<a href="' +
-							project.demoUrl +
-							'" class="btn btn--ghost" onclick="event.stopPropagation()" target="_blank" rel="noopener noreferrer" data-i18n="modal_demo">Live Demo</a>';
-					}
-
-					article.innerHTML =
-						'<div class="project-card__body">' +
-						'<h3 data-i18n="' +
-						project.titleKey +
-						'">' +
-						project.titleKey +
-						'</h3>' +
-						'<div class="project-card__tags">' +
-						tagsHtml +
-						'</div>' +
-						'<div class="project-card__actions">' +
-						actionsHtml +
-						'</div>' +
-						'</div>';
-
-					grid.appendChild(article);
-				});
+				var projectManager = new ProjectManager();
+				projectManager.init(i18n);
 			});
 		</script>
 	</body>

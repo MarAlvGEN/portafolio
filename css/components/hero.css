@@ -4,29 +4,42 @@
    green diagonal shape, and social links.
    ============================================= */
 .hero {
+	max-width: 1200px;
+	width: calc(100% - 40px);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	gap: clamp(40px, 6vw, 80px);
+	gap: clamp(32px, 4vw, 60px);
 	position: relative;
-	padding: clamp(100px, 14vh, 140px) clamp(24px, 5vw, 60px) clamp(40px, 8vh, 80px);
-	min-height: calc(100vh - 40px);
-	margin: 20px;
+	padding: clamp(40px, 5vh, 60px) clamp(24px, 5vw, 60px);
+	height: clamp(400px, 65vh, 560px);
+	margin: 20px auto;
 	background: var(--color-bg-alt);
 	border-radius: var(--hero-radius);
 	border: 1px solid var(--color-border);
-	overflow: visible;
+	overflow: hidden;
 	z-index: 1;
+	box-sizing: border-box;
 }
 
 /* ── Content column (left) ── */
 .hero-content {
 	display: flex;
 	flex-direction: column;
-	gap: clamp(12px, 2vh, 20px);
-	max-width: 580px;
+	gap: clamp(8px, 1.5vh, 14px);
+	max-width: 640px;
 	width: 100%;
 	z-index: 2;
+}
+
+/* ── Main title ── */
+.hero h1 {
+	font-family: var(--font-body);
+	font-weight: 700;
+	font-size: clamp(2.2rem, 7vw, 5.5rem);
+	width: 100%;
+	overflow-wrap: anywhere;
+	text-shadow: 0 0 40px rgba(74, 222, 128, 0.15);
 }
 
 /* ── Badge pill ── */
@@ -35,14 +48,14 @@
 	align-items: center;
 	gap: 8px;
 	padding: 7px 16px;
-	border: 1.5px solid rgba(255, 255, 255, 0.25);
+	border: 1.5px solid rgba(74, 222, 128, 0.35);
 	border-radius: var(--badge-radius);
 	font-family: var(--font-mono);
 	font-weight: 500;
 	font-size: 0.8rem;
-	color: var(--color-text);
+	color: var(--color-accent);
 	width: fit-content;
-	background: rgba(255, 255, 255, 0.06);
+	background: rgba(74, 222, 128, 0.08);
 }
 
 .hero-badge svg {
@@ -52,14 +65,14 @@
 
 /* ── Subtitle ── */
 .hero h2 {
-	color: var(--color-text-silver);
-	font-weight: 300;
+	color: var(--color-text);
+	font-weight: 400;
 	font-size: clamp(0.9rem, 1.5vw, 1.2rem);
 }
 
 /* ── Description ── */
 .hero-description {
-	max-width: 580px;
+	max-width: 640px;
 }
 
 /* ── Action buttons ── */
@@ -71,15 +84,13 @@
 }
 
 .hero-actions .btn--primary {
-	background: #d1d5db;
-	color: #1a1a1e;
-	border: 1px solid #d1d5db;
+	background: var(--color-accent);
+	color: #0f1115;
+	border: 2px solid var(--color-accent);
 }
 
 .hero-actions .btn--primary:hover {
-	background: #e5e7eb;
-	border-color: #e5e7eb;
-	box-shadow: none;
+	box-shadow: 0 0 20px var(--color-accent-glow);
 	transform: translateY(-1px);
 }
 
@@ -146,13 +157,16 @@
 
 /* ── Avatar column (right) ── */
 .hero-image {
-	width: clamp(440px, 26vw, 540px);
-	aspect-ratio: 2703 / 4472;
-	max-height: calc(100svh - 180px);
+	width: clamp(400px, 28vw, 520px);
+	height: calc(100% + clamp(120px, 15vh, 180px));
+	max-height: none;
+	margin-top: clamp(-60px, -7.5vh, -90px);
+	margin-bottom: clamp(-60px, -7.5vh, -90px);
 	flex-shrink: 0;
 	position: relative;
-	overflow: visible;
+	overflow: hidden;
 	z-index: 2;
+	padding: 0 2rem;
 }
 
 .hero-image img {
@@ -161,36 +175,20 @@
 	object-fit: cover;
 	object-position: top center;
 	display: block;
-	filter: drop-shadow(0 4px 30px rgba(0, 0, 0, 0.5));
+	filter: drop-shadow(10px 5px 2px rgba(0, 0, 0, 0.7));
 }
 
-/* ── Green diagonal shape (bottom-left triangle) ── */
-.hero__green-shape {
+/* ── Green diagonal shape (pseudo-element) ── */
+.hero::before {
+	content: '';
 	position: absolute;
-	bottom: 0;
+	top: 0;
 	left: 0;
-	width: 280px;
-	height: 320px;
+	width: 105%;
+	height: 100%;
 	background: var(--color-accent);
 	opacity: 0.15;
-	clip-path: polygon(0 35%, 50% 100%, 0 100%);
+	clip-path: polygon(0 35%, 100% 45%, 100% 0%, 0 0%);
 	pointer-events: none;
 	z-index: 0;
-}
-
-/* ── Copyright / signature text ── */
-.hero__copyright {
-	position: absolute;
-	bottom: 40%;
-	left: 42%;
-	font-family: var(--font-body);
-	font-size: 0.75rem;
-	font-weight: 500;
-	color: rgba(255, 255, 255, 0.35);
-	white-space: nowrap;
-	pointer-events: none;
-	z-index: 3;
-	transform: rotate(-35deg);
-	transform-origin: left center;
-	letter-spacing: 0.5px;
 }

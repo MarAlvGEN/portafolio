@@ -1,9 +1,8 @@
 class Nav {
 	static ITEMS = [
 		{ file: 'index', labelKey: 'nav_home', iconId: 'home' },
-		{ file: 'about', labelKey: 'nav_about', iconId: 'user' },
 		{ file: 'projects', labelKey: 'nav_projects', iconId: 'code' },
-		{ file: 'blog', labelKey: 'nav_blog', iconId: 'pen' },
+		{ file: 'about', labelKey: 'nav_about', iconId: 'user' },
 	];
 
 	constructor(activePage) {
@@ -65,13 +64,13 @@ class Footer {
 		this.element.className = 'footer';
 		this.element.innerHTML =
 			'<div class="footer__social">' +
-			'<a href="https://youtube.com/@netenebrae" aria-label="YouTube" target="_blank" rel="noopener noreferrer">' +
+			'<a href="https://www.youtube.com/@NeTenebrae" aria-label="YouTube" target="_blank" rel="noopener noreferrer">' +
 			IconService.get('youtube') +
 			'</a>' +
-			'<a href="https://github.com/netenebrae" aria-label="GitHub" target="_blank" rel="noopener noreferrer">' +
+			'<a href="https://github.com/NeTenebraes" aria-label="GitHub" target="_blank" rel="noopener noreferrer">' +
 			IconService.get('github') +
 			'</a>' +
-			'<a href="https://linkedin.com/in/netenebrae" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">' +
+			'<a href="https://www.linkedin.com/in/mauricio-alvarez-dev-backend/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">' +
 			IconService.get('linkedin') +
 			'</a>' +
 			'</div>' +
