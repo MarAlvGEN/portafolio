@@ -4,3 +4,4 @@ node_modules/
 .env
 .obsidian/
 .vite/
+*.md
