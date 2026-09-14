@@ -1,35 +1,48 @@
 /* =============================================
    Component — Hero (index)
+   Card-like container with 2-column layout,
+   green diagonal shape, and social links.
    ============================================= */
 .hero {
-	max-width: none;
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	gap: clamp(50px, 4vw, 60px);
+	justify-content: space-between;
+	gap: clamp(40px, 6vw, 80px);
 	position: relative;
-	overflow: clip;
+	padding: clamp(100px, 14vh, 140px) clamp(24px, 5vw, 60px) clamp(40px, 8vh, 80px);
+	min-height: calc(100vh - 40px);
+	margin: 20px;
+	background: var(--color-bg-alt);
+	border-radius: var(--hero-radius);
+	border: 1px solid var(--color-border);
+	overflow: visible;
+	z-index: 1;
 }
 
+/* ── Content column (left) ── */
 .hero-content {
 	display: flex;
 	flex-direction: column;
 	gap: clamp(12px, 2vh, 20px);
+	max-width: 580px;
+	width: 100%;
+	z-index: 2;
 }
 
+/* ── Badge pill ── */
 .hero-badge {
 	display: inline-flex;
 	align-items: center;
 	gap: 8px;
 	padding: 7px 16px;
-	border: 1.5px solid var(--color-accent);
+	border: 1.5px solid rgba(255, 255, 255, 0.25);
 	border-radius: var(--badge-radius);
 	font-family: var(--font-mono);
 	font-weight: 500;
 	font-size: 0.8rem;
-	color: var(--color-accent);
+	color: var(--color-text);
 	width: fit-content;
-	background: var(--color-accent-dim);
+	background: rgba(255, 255, 255, 0.06);
 }
 
 .hero-badge svg {
@@ -37,16 +50,19 @@
 	height: 14px;
 }
 
+/* ── Subtitle ── */
 .hero h2 {
-	color: var(--color-text-muted);
+	color: var(--color-text-silver);
 	font-weight: 300;
 	font-size: clamp(0.9rem, 1.5vw, 1.2rem);
 }
 
+/* ── Description ── */
 .hero-description {
 	max-width: 580px;
 }
 
+/* ── Action buttons ── */
 .hero-actions {
 	display: flex;
 	flex-wrap: wrap;
@@ -54,50 +70,127 @@
 	margin-top: 6px;
 }
 
-.hero-image {
+.hero-actions .btn--primary {
+	background: #d1d5db;
+	color: #1a1a1e;
+	border: 1px solid #d1d5db;
+}
+
+.hero-actions .btn--primary:hover {
+	background: #e5e7eb;
+	border-color: #e5e7eb;
+	box-shadow: none;
+	transform: translateY(-1px);
+}
+
+.hero-actions .btn--ghost {
+	background: transparent;
+	color: var(--color-text-muted);
+	border: 1px solid var(--color-border);
+}
+
+.hero-actions .btn--ghost:hover {
+	border-color: var(--color-text-muted);
+	color: var(--color-text);
+}
+
+/* ── Social links section ── */
+.hero-social {
 	display: flex;
-	padding-top: 5rem;
-	transform: scale(1.5);
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 16px;
+	margin-top: 8px;
+}
+
+.hero-social-divider {
+	width: 60px;
+	height: 2px;
+	background: var(--color-accent);
+	border-radius: 1px;
+}
+
+.hero-social-links {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+}
+
+.hero-social-links a {
+	display: flex;
+	align-items: center;
 	justify-content: center;
+	width: 44px;
+	height: 44px;
+	border-radius: 12px;
+	border: 1px solid var(--color-border);
+	background: var(--color-bg-elevated);
+	transition: all 0.25s ease;
+}
+
+.hero-social-links a:hover {
+	border-color: var(--color-accent);
+	background: var(--color-accent-dim);
+}
+
+.hero-social-links a svg {
+	width: 18px;
+	height: 18px;
+	fill: var(--color-text-muted);
+	transition: fill 0.25s ease;
+}
+
+.hero-social-links a:hover svg {
+	fill: var(--color-accent);
+}
+
+/* ── Avatar column (right) ── */
+.hero-image {
+	width: clamp(440px, 26vw, 540px);
+	aspect-ratio: 2703 / 4472;
+	max-height: calc(100svh - 180px);
+	flex-shrink: 0;
 	position: relative;
-	height: clamp(600px, 80vh, 100vh);
+	overflow: visible;
+	z-index: 2;
 }
 
 .hero-image img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	object-position: center top;
-	border-radius: 0;
+	object-position: top center;
+	display: block;
+	filter: drop-shadow(0 4px 30px rgba(0, 0, 0, 0.5));
 }
 
-/* Skewed green shape behind character */
+/* ── Green diagonal shape (bottom-left triangle) ── */
 .hero__green-shape {
 	position: absolute;
-	bottom: -10%;
-	right: 0;
-	width: 55vw;
-	max-width: 600px;
-	height: 120%;
+	bottom: 0;
+	left: 0;
+	width: 280px;
+	height: 320px;
 	background: var(--color-accent);
-	transform: skewX(-15deg);
-	transform-origin: bottom right;
-	z-index: 0;
-	border-radius: 4px;
+	opacity: 0.15;
+	clip-path: polygon(0 35%, 50% 100%, 0 100%);
 	pointer-events: none;
+	z-index: 0;
 }
 
+/* ── Copyright / signature text ── */
 .hero__copyright {
 	position: absolute;
-	bottom: 18%;
-	right: 22%;
-	font-family: var(--font-mono);
-	font-size: 0.7rem;
-	color: var(--color-text-muted);
-	transform: rotate(-30deg);
-	transform-origin: center;
-	opacity: 0.5;
-	z-index: 3;
+	bottom: 40%;
+	left: 42%;
+	font-family: var(--font-body);
+	font-size: 0.75rem;
+	font-weight: 500;
+	color: rgba(255, 255, 255, 0.35);
 	white-space: nowrap;
 	pointer-events: none;
+	z-index: 3;
+	transform: rotate(-35deg);
+	transform-origin: left center;
+	letter-spacing: 0.5px;
 }

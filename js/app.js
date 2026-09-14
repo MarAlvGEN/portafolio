@@ -31,8 +31,9 @@ class ProjectModal {
 			implicationsKey: 'project_1_implications',
 			challengesKey: 'project_1_challenges',
 			resultsKey: 'project_1_results',
-			tagIds: ['java', 'spring', 'postgresql', 'redis', 'oauth2'],
-			tagNames: ['Java', 'Spring Boot', 'PostgreSQL', 'Redis', 'OAuth2'],
+			tagIds: ['linux', 'bash'],
+			tagNames: ['Linux', 'Bash'],
+			githubUrl: 'https://github.com/NeTenebraes/Intel-Legacy-Buffer-Fix-Arch-Linux',
 		},
 		{
 			titleKey: 'project_2_title',
@@ -40,8 +41,9 @@ class ProjectModal {
 			implicationsKey: 'project_2_implications',
 			challengesKey: 'project_2_challenges',
 			resultsKey: 'project_2_results',
-			tagIds: ['python', 'docker', 'prometheus', 'grafana'],
-			tagNames: ['Python', 'Docker', 'Prometheus', 'Grafana'],
+			tagIds: ['lua', 'git'],
+			tagNames: ['Lua', 'Git'],
+			githubUrl: 'https://github.com/NeTenebraes/nenvim',
 		},
 		{
 			titleKey: 'project_3_title',
@@ -49,8 +51,9 @@ class ProjectModal {
 			implicationsKey: 'project_3_implications',
 			challengesKey: 'project_3_challenges',
 			resultsKey: 'project_3_results',
-			tagIds: ['bash', 'python', 'nmap', 'curl'],
-			tagNames: ['Bash', 'Python', 'Nmap', 'Curl'],
+			tagIds: ['linux', 'bash', 'python'],
+			tagNames: ['Linux', 'Bash', 'Python'],
+			githubUrl: 'https://github.com/NeTenebraes/neBSPWM-dotfiles',
 		},
 		{
 			titleKey: 'project_4_title',
@@ -58,8 +61,52 @@ class ProjectModal {
 			implicationsKey: 'project_4_implications',
 			challengesKey: 'project_4_challenges',
 			resultsKey: 'project_4_results',
-			tagIds: ['docker', 'kubernetes', 'terraform', 'aws'],
-			tagNames: ['Docker', 'Kubernetes', 'Terraform', 'AWS'],
+			tagIds: ['cybersecurity', 'git'],
+			tagNames: ['Cybersecurity', 'Git'],
+			githubUrl: 'https://github.com/NeTenebraes/neCyberWiki',
+			demoUrl: 'https://netenebraes.github.io/neCyberWiki/',
+		},
+		{
+			titleKey: 'project_5_title',
+			overviewKey: 'project_5_overview',
+			implicationsKey: 'project_5_implications',
+			challengesKey: 'project_5_challenges',
+			resultsKey: 'project_5_results',
+			tagIds: ['cybersecurity', 'nmap', 'curl'],
+			tagNames: ['Cybersecurity', 'Nmap', 'Curl'],
+			githubUrl: 'https://github.com/NeTenebraes',
+		},
+		{
+			titleKey: 'project_6_title',
+			overviewKey: 'project_6_overview',
+			implicationsKey: 'project_6_implications',
+			challengesKey: 'project_6_challenges',
+			resultsKey: 'project_6_results',
+			tagIds: ['javascript', 'curl'],
+			tagNames: ['JavaScript', 'Curl'],
+			githubUrl: 'https://github.com/MarAlvGEN/NASA_APOD_Explorer',
+			demoUrl: 'https://maralvgen.github.io/NASA_APOD_Explorer/',
+		},
+		{
+			titleKey: 'project_7_title',
+			overviewKey: 'project_7_overview',
+			implicationsKey: 'project_7_implications',
+			challengesKey: 'project_7_challenges',
+			resultsKey: 'project_7_results',
+			tagIds: ['javascript', 'nosql'],
+			tagNames: ['JavaScript', 'NoSQL'],
+			githubUrl: 'https://github.com/camilobermeo/devPortes',
+			demoUrl: 'https://camilobermeo.github.io/devPortes/',
+		},
+		{
+			titleKey: 'project_8_title',
+			overviewKey: 'project_8_overview',
+			implicationsKey: 'project_8_implications',
+			challengesKey: 'project_8_challenges',
+			resultsKey: 'project_8_results',
+			tagIds: ['lua', 'git'],
+			tagNames: ['Lua', 'Git'],
+			githubUrl: 'https://github.com/Jezda1337/nvim-html-css/pull/64',
 		},
 	];
 
@@ -128,6 +175,24 @@ class ProjectModal {
 		wrapper.className = 'modal__techstack-badges';
 		techContainer.appendChild(wrapper);
 		badges.renderTo(wrapper);
+
+		var githubLink = document.getElementById('modalGithub');
+		var demoLink = document.getElementById('modalDemo');
+		if (githubLink) {
+			githubLink.href = project.githubUrl || '#';
+			githubLink.target = '_blank';
+			githubLink.rel = 'noopener noreferrer';
+		}
+		if (demoLink) {
+			if (project.demoUrl) {
+				demoLink.href = project.demoUrl;
+				demoLink.target = '_blank';
+				demoLink.rel = 'noopener noreferrer';
+				demoLink.style.display = '';
+			} else {
+				demoLink.style.display = 'none';
+			}
+		}
 
 		this.overlay.classList.add('active');
 		document.documentElement.style.overflow = 'hidden';

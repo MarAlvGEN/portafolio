@@ -56,23 +56,6 @@
 					</button>
 				</div>
 				<div class="modal__body">
-					<div class="modal__image">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="48"
-							height="48"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="#4ade80"
-							stroke-width="1.5"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-						>
-							<path
-								d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
-							/>
-						</svg>
-					</div>
 					<div class="modal__content" id="modalContent"></div>
 				</div>
 				<div class="modal__footer">
@@ -81,12 +64,14 @@
 						<a
 							href="#"
 							class="btn btn--ghost"
+							id="modalGithub"
 							data-i18n="modal_github"
 							>GitHub</a
 						>
 						<a
 							href="#"
 							class="btn btn--ghost"
+							id="modalDemo"
 							data-i18n="modal_demo"
 							>Live Demo</a
 						>
@@ -109,36 +94,8 @@
 				window.modal = new ProjectModal();
 				window.modal.setLang(i18n);
 
-				var projectCards = [
-					{
-						titleKey: 'project_1_title',
-						tagIds: ['java', 'spring', 'postgresql', 'oauth2'],
-						tagNames: [
-							'Java',
-							'Spring Boot',
-							'PostgreSQL',
-							'OAuth2',
-						],
-					},
-					{
-						titleKey: 'project_2_title',
-						tagIds: ['python', 'docker', 'prometheus', 'grafana'],
-						tagNames: ['Python', 'Docker', 'Prometheus', 'Grafana'],
-					},
-					{
-						titleKey: 'project_3_title',
-						tagIds: ['bash', 'python', 'nmap', 'curl'],
-						tagNames: ['Bash', 'Python', 'Nmap', 'Curl'],
-					},
-					{
-						titleKey: 'project_4_title',
-						tagIds: ['docker', 'kubernetes', 'terraform', 'aws'],
-						tagNames: ['Docker', 'Kubernetes', 'Terraform', 'AWS'],
-					},
-				];
-
 				var grid = document.getElementById('projectsGrid');
-				projectCards.forEach(function (card, index) {
+				ProjectModal.DATA.forEach(function (project, index) {
 					var article = document.createElement('article');
 					article.className = 'project-card';
 					article.setAttribute(
@@ -146,32 +103,41 @@
 						'modal.open(' + index + ')',
 					);
 
-					var tagsHtml = card.tagIds
+					var tagsHtml = project.tagIds
 						.map(function (id, i) {
 							return (
 								'<span class="badge">' +
 								(IconService.get(id) || '') +
 								'<span class="badge__text">' +
-								card.tagNames[i] +
+								project.tagNames[i] +
 								'</span></span>'
 							);
 						})
 						.join('');
 
+					var actionsHtml =
+						'<a href="' +
+						(project.githubUrl || '#') +
+						'" class="btn btn--ghost" onclick="event.stopPropagation()" target="_blank" rel="noopener noreferrer" data-i18n="modal_github">GitHub</a>';
+					if (project.demoUrl) {
+						actionsHtml +=
+							'<a href="' +
+							project.demoUrl +
+							'" class="btn btn--ghost" onclick="event.stopPropagation()" target="_blank" rel="noopener noreferrer" data-i18n="modal_demo">Live Demo</a>';
+					}
+
 					article.innerHTML =
-						'<div class="project-card__image"><div class="project-card__image-placeholder">[PROJECT<br/>IMAGE]</div></div>' +
 						'<div class="project-card__body">' +
 						'<h3 data-i18n="' +
-						card.titleKey +
+						project.titleKey +
 						'">' +
-						card.titleKey +
+						project.titleKey +
 						'</h3>' +
 						'<div class="project-card__tags">' +
 						tagsHtml +
 						'</div>' +
 						'<div class="project-card__actions">' +
-						'<a href="#" class="btn btn--ghost" onclick="event.stopPropagation()" data-i18n="modal_github">GitHub</a>' +
-						'<a href="#" class="btn btn--ghost" onclick="event.stopPropagation()" data-i18n="modal_demo">Live Demo</a>' +
+						actionsHtml +
 						'</div>' +
 						'</div>';
 

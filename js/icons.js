@@ -37,6 +37,8 @@ class IconService {
 			'kubernetes',
 			'terraform',
 			'aws',
+			'javascript',
+			'lua',
 		];
 
 		const loadPromises = iconNames.map(async (name) => {
