@@ -1,43 +1,60 @@
-# Prototipado de Portafolio | PROPUESTA #01
+# Mauricio Alvarez | Portafolio Personal
 
-## [CHECA EL INDEX](https://design.penpot.app/#/view?file-id=9529fedc-e097-80ce-8008-64cea048fef8&page-id=913d4a22-ba3f-8112-8008-613dd747e4b8&section=interactions&index=0&share-id=d390ec3b-f0b3-80cd-8008-64d06ed9c15c)
+[![Website](https://img.shields.io/badge/Website-Live-0d1117?style=for-the-badge&logo=github&logoColor=white)](https://netenebraes.github.io)
+[![Penpot Design](https://img.shields.io/badge/Penpot-Prototipo-0d1117?style=for-the-badge&logo=penpot&logoColor=white)](https://design.penpot.app/#/view?file-id=9529fedc-e097-80ce-8008-64cea048fef8&page-id=913d4a22-ba3f-8112-8008-613dd747e4b8&section=interactions&index=0&share-id=d390ec3b-f0b3-80cd-8008-64d06ed9c15c)
 
-![Vista previa del portafolio](./assets/preview.png)
-
-> Por el momento, el portafolio **solo cuenta  con el index**. Sin embargo, también encontrarás las referencias y mis proyectos personales en los cuales me basé para la realización de este trabajo.
-
-## Resumen
-Este repositorio contiene la **propuesta** de diseño para el portafolio personal en base a **mis proyectos y trabajos anteriores**. 
-
-El proyecto está preparado para que puedas consultarlo de **dos formas distintas**: 
-1. [Mediante acceso directo en la nube](https://design.penpot.app/#/view?file-id=9529fedc-e097-80ce-8008-64cea048fef8&page-id=913d4a22-ba3f-8112-8008-613dd747e4b8&section=interactions&index=0&share-id=d390ec3b-f0b3-80cd-8008-64d06ed9c15c) 
-
-2. Descargando e importando el archivo fuente a la aplicacion desplegada en un entorno local contenerizado con Docker.
-
-### Como inspeccionar (Web y Local)
-![Vista previa del portafolio](./assets/tuto.png)
-
-
----
-## Opción 1. Visualización Directa Online (Recomendada)
-
-Para revisar el diseño final y probar las interacciones sin necesidad de instalar software adicional. La vista interactiva permite navegar por la estructura de pantallas e inspeccionar propiedades de diseño como fuentes, colores y código CSS generado.
-
-> **Requiere cuenta gratuita de penpot - Se recomienda Google**
-
-* [Acceso directo al prototipo](https://design.penpot.app/#/view?file-id=9529fedc-e097-80ce-8008-64cea048fef8&page-id=913d4a22-ba3f-8112-8008-613dd747e4b8&section=interactions&index=0&share-id=d390ec3b-f0b3-80cd-8008-64d06ed9c15c)
-
-## Opción 2. Despliegue Local con Docker
-
-Si prefieres revisar el proyecto dentro de una instancia propia e independiente de Penpot (Y así aprovechar caracteristica como **generar codigo completamente gratis**), puedes levantar el servidor localmente mediante Docker e importar el [`index.penpot`](https://github.com/MarAlvGEN/portafolio/blob/main/index.penpot). 
-> [Más info en la documentación de Penpot](https://help.penpot.app/technical-guide/getting-started/docker/)
+Fullstack Developer & SecOps. Backend developer con mentalidad de hacker: construyo APIs seguras, automatizo sistemas Linux y creo contenido técnico para una comunidad de más de 50,000 desarrolladores en YouTube y TikTok.
 
 ---
 
-## ¿Por qué elegí Penpot sobre Figma?
+## Vista Previa
 
-Seleccioné **Penpot** para el diseño de este prototipo por tres razones técnicas y prácticas:
+<img width="957" height="642" alt="Vista previa del sitio" src="https://github.com/user-attachments/assets/4079792d-cbeb-4ea2-8e6c-a19b370a8010" />
 
-* **Inspección de código libre e ilimitada:** A diferencia de Figma (que restringió su *Dev Mode* tras un muro de pago), Penpot permite inspeccionar/exportar el código HTML, CSS y SVG generado de forma 100% gratuita y sin limitaciones.
-* **Terminología nativa de CSS:** En lugar de usar solo términos para diseñadores (como hace Figma para sus botones), Penpot utiliza las propiedades de CSS reales en su UI (por ejemplo, los botones directamente se llaman `align-items` o `justify-content`, ect). Diseñar en Penpot ayuda mucho a entener como se maqueta en CSS.
-*  **Rendimiento optimizado y autonomía**: Al poder desplegar Penpot localmente con Docker, la herramienta aprovecha los recursos del sistema sin depender de la velocidad de conexión a internet ni de la carga de servidores de terceros.
+---
+
+## Historia del Proyecto: Del Boceto al Código
+
+Este portafolio no nació directamente en el navegador. Para lograr un producto funcional, ligero y con identidad visual propia, el proyecto pasó por una fase estructurada de diseño, prototipado e implementación.
+
+### 1. La Idea Inicial y la Elección de Penpot
+El primer paso consistió en maquetar una **Propuesta #01** de diseño interactivo. Para ello elegí **Penpot** sobre Figma por tres razones clave:
+
+- **Inspección de código ilimitada:** Permite inspeccionar CSS y SVG de forma gratuita sin las restricciones de pago del *Dev Mode* de Figma.
+- **Terminología nativa de CSS:** La interfaz utiliza propiedades reales como `flexbox`, `align-items` o `justify-content`, simplificando el paso del prototipo al código.
+- **Autonomía y despliegue local:** La posibilidad de alojar Penpot mediante Docker me permitió trabajar directamente con los recursos del sistema sin depender de conexiones externas.
+
+> *El archivo fuente `index.penpot` se incluye en este repositorio para ser importado en instancias locales de Docker o consultado directamente en la nube.*
+
+### 2. Desarrollo e Implementación
+Una vez validada la estructura en el prototipo, trasladé el diseño a un frontend web limpio, priorizando el rendimiento y la accesibilidad:
+
+- **Sin frameworks ni dependencias:** Construido 100% en JavaScript Vanilla y CSS puro para garantizar la máxima velocidad de carga.
+- **Enfoque Developer/SecOps:** Uso de variables CSS personalizadas y una selección tipográfica técnica (*Intel One Mono* y *Space Grotesk*).
+
+---
+
+## Estructura del Sitio
+
+- **Inicio (`index.html`)** — Hero principal con métricas de comunidad en redes sociales y presentación.
+- **Sobre mí (`about.html`)** — Perfil profesional, stack técnico y experiencia.
+- **Proyectos (`projects.html`)** — Galería de desarrollos backend, automatización y herramientas SecOps.
+
+---
+
+## Tech Stack
+
+- **Diseño & UI/UX:** Penpot (Nube y Docker Local)
+- **Frontend:** HTML5 semántico, CSS3 (Custom Properties, Flexbox, Grid) y JavaScript Vanilla
+- **Tipografía:** Google Fonts (*Intel One Mono*, *Space Grotesk*)
+
+---
+
+## Métodos de Inspección del Prototipo
+
+Para revisar las decisiones de diseño y el código fuente original del prototipo:
+
+1. **Vía Web (Recomendado):** Accede directamente al [Prototipo interactivo en Penpot](https://design.penpot.app/#/view?file-id=9529fedc-e097-80ce-8008-64cea048fef8&page-id=913d4a22-ba3f-8112-8008-613dd747e4b8&section=interactions&index=0&share-id=d390ec3b-f0b3-80cd-8008-64d06ed9c15c).
+2. **Vía Docker Local:** Importa el archivo `index.penpot` en una instancia propia de Penpot siguiendo la guía oficial de despliegue con Docker.
+
+![Guía de inspección](./assets/tuto.png)
