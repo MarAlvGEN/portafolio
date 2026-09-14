@@ -11,11 +11,13 @@ Fullstack Developer & SecOps. Backend developer con mentalidad de hacker: constr
 
 <img width="957" height="642" alt="Vista previa del sitio" src="https://github.com/user-attachments/assets/4079792d-cbeb-4ea2-8e6c-a19b370a8010" />
 
+### 🌐 [<ins>HAZ CLIC AQUÍ PARA VER LA WEB</ins>](https://netenebraes.github.io)
+
 ---
 
-## Historia del Proyecto: Del Boceto al Código
+## Del Boceto al Código
 
-Este portafolio no nació directamente en el navegador. Para lograr un producto funcional, ligero y con identidad visual propia, el proyecto pasó por una fase estructurada de diseño, prototipado e implementación.
+Para lograr un producto funcional, ligero y con identidad visual propia, el proyecto pasó por una fase estructurada de diseño, prototipado e implementación.
 
 ### 1. La Idea Inicial y la Elección de Penpot
 El primer paso consistió en maquetar una **Propuesta #01** de diseño interactivo. Para ello elegí **Penpot** sobre Figma por tres razones clave:
@@ -27,7 +29,7 @@ El primer paso consistió en maquetar una **Propuesta #01** de diseño interacti
 > *El archivo fuente `index.penpot` se incluye en este repositorio para ser importado en instancias locales de Docker o consultado directamente en la nube.*
 
 ### 2. Desarrollo e Implementación
-Una vez validada la estructura en el prototipo, trasladé el diseño a un frontend web limpio, priorizando el rendimiento y la accesibilidad:
+Una vez validada la estructura en el prototipo, trasladé el diseño a un frontend web, priorizando el rendimiento y la accesibilidad:
 
 - **Sin frameworks ni dependencias:** Construido 100% en JavaScript Vanilla y CSS puro para garantizar la máxima velocidad de carga.
 - **Enfoque Developer/SecOps:** Uso de variables CSS personalizadas y una selección tipográfica técnica (*Intel One Mono* y *Space Grotesk*).
