@@ -7,6 +7,9 @@ main {
 	display: flex;
 	flex-direction: column;
 	min-height: 0;
+	min-width: 100vw;
+	justify-content: center;
+	align-items: center;
 }
 
 section {
@@ -19,6 +22,8 @@ section {
 	position: relative;
 	overflow-x: clip;
 	overflow-y: visible;
+	padding: 0 clamp(16px, 4vw, 40px);
+	box-sizing: border-box;
 }
 
 /* Contenedor de proyectos (inyectado por JS) */
